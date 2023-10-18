@@ -42,7 +42,7 @@ const Home = () => {
   useEffect(() => {
     if (showAnalyze) {
       timerId = setTimeout(() => {
-        navigate("/results");
+        navigate("/analyze");
         window.location.reload();
       }, 1500);
     }

@@ -52,7 +52,7 @@
 .bttnContainer div {
   color: var(--default-gray-400, #9ca3af);
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 26.856px;
@@ -61,12 +61,13 @@
 .bttnContainer div span {
   color: var(--colors-primary-2, #2874f0);
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .signinBtn {
   display: flex;
   padding: 10px 20px;
-  min-width: 80px;
+  min-width: 90px;
   justify-content: center;
   align-items: center;
   border-radius: var(--round-corners-round-sm, 6px);
@@ -95,7 +96,7 @@
   }
 
   .signin {
-    padding: 45px var(--round-corners-2-xl, 25px);
+    padding: 35px 20px;
   }
 
   .bttnContainer {
@@ -107,6 +108,7 @@
     width: 100%;
     display: flex;
     justify-content: left;
+    font-size: 16px;
   }
 
   .signinBtn {

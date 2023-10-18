@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import ErrorIcon from "@mui/icons-material/Error";
 import "./ErrorBoundary.css";
 

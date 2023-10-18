@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Signin from "../Containers/Signin/Signin";
 import Home from "../Containers/Home/Home";
 import QueryBuilder from "../Containers/QueryBuilder/QueryBuilder";
-import Results from "../Containers/Results/Results";
+import Analyze from "./Analyze/Analyze";
 
 export const routes = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const routes = createBrowserRouter([
     element: <QueryBuilder />,
   },
   {
-    path: "/results",
-    element: <Results />,
+    path: "/analyze",
+    element: <Analyze />,
   },
 ]);

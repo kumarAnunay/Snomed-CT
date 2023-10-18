@@ -1,29 +1,35 @@
 import { useNavigate } from "react-router";
 import "./Query.css";
 import { useContext, useEffect, useRef, useState } from "react";
-import { ValuesContext } from "../ContextProvider";
+// import { ValuesContext } from "../ContextProvider";
 
 let timerId;
-
-const Query = () => {
+const Query = ({ queryResponseText }) => {
   const [execute, setExecute] = useState(false);
   const inputRef = useRef(null);
 
-  const { queryText, setqueryText } = useContext(ValuesContext);
+  const [queryText, setQueryText] = useState("");
+
+  // const { queryText, setqueryText } = useContext(ValuesContext);
 
   const navigate = useNavigate();
 
   const inputHandler = (event) => {
-    setqueryText(event.target.value);
+    setQueryText(event.target.value);
     setExecute(false);
   };
+
+  useEffect(() => {
+    if (queryResponseText) {
+      setQueryText(queryResponseText);
+    }
+  }, [queryResponseText]);
 
   const queryHandler = () => {
     if (queryText == "") {
       inputRef.current.focus();
     } else {
       setExecute(true);
-      localStorage.setItem("queryText", queryText);
     }
   };
 
@@ -31,9 +37,9 @@ const Query = () => {
     // console.log(execute);
     if (execute) {
       timerId = setTimeout(() => {
-        navigate("/results");
+        navigate("/analyze");
         window.location.reload();
-      }, 1500);
+      }, 1000);
     }
 
     return () => {
@@ -53,12 +59,6 @@ const Query = () => {
           className="textArea"
           ref={inputRef}
         ></textarea>
-        <p>
-          Ex:- 84114007 |Heart failure (disorder)| or &#60;&#60; 73211009
-          |Diabetes mellitus (disorder)| or &#60;&#60; 703272007 |Heart failure
-          with reduced ejection fraction (disorder)| or &#60;&#60; 38341003
-          |Hypertensive disorder, systemic arterial (disorder)|
-        </p>
       </div>
       <div className="queryBttn">
         <button onClick={queryHandler}>

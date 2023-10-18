@@ -1,35 +1,57 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./ClinicalFindings.css";
-import { data } from "../../utils/Constants/ClinicalFindings";
+import axios from "axios";
 
-let timerId;
+// let timerId;
 
-const ClinicalFindings = () => {
-  const [tableData, setTableData] = useState([]);
-  const [loading, setLoading] = useState([]);
+const ClinicalFindings = ({ loading, tableData }) => {
+  // const [tableData, setTableData] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const freeText = localStorage.getItem("freeText");
-    const searchText = freeText.toLowerCase().split(" ");
-    let filteredData = data;
+  // const filterData = async () => {
+  //   try {
+  //     const response = await axios.post(
+  //       "http://kaushal.ogtech.in:8001/api/get_ecl_query",
+  //       {
+  //         free_text: JSON.stringify(localStorage.getItem("freeText")),
+  //       }
+  //     );
+  //     setTableData(response.data.results);
+  //     // console.log("Free Text Response:- ", tableData);
+  //     localStorage.setItem("query", response.data.query);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     console.error("Error fetching data from the API:", error);
+  //     setLoading(false);
+  //   }
+  // };
 
-    filteredData = filteredData.filter((item) => {
-      return searchText.some((text) => {
-        return item.preferredTerm.toLowerCase().includes(text);
-      });
-    });
+  // useEffect(() => {
+  //   filterData();
+  // }, []);
 
-    console.log("data", filteredData);
+  // useEffect(() => {
+  //   const freeText = localStorage.getItem("freeText");
+  //   const searchText = freeText.toLowerCase().split(" ");
+  //   let filteredData = data;
 
-    timerId = setTimeout(() => {
-      setTableData(filteredData);
-      setLoading(false);
-    }, 1000);
+  //   filteredData = filteredData.filter((item) => {
+  //     return searchText.some((text) => {
+  //       return item.preferredTerm.toLowerCase().includes(text);
+  //     });
+  //   });
 
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, []);
+  //   console.log("data", filteredData);
+
+  //   timerId = setTimeout(() => {
+  //     setTableData(filteredData);
+  //     setLoading(false);
+  //   }, 1000);
+
+  //   return () => {
+  //     clearTimeout(timerId);
+  //   };
+  // }, []);
 
   return (
     <div className="clinicalFindings">
@@ -50,15 +72,15 @@ const ClinicalFindings = () => {
           <table>
             <thead>
               <tr>
-                <th>ID</th>
+                <th>Concept ID</th>
                 <th>Preferred Term</th>
               </tr>
             </thead>
             <tbody>
-              {tableData.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.id}</td>
-                  <td>{item.preferredTerm}</td>
+              {tableData.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.concept_id}</td>
+                  <td>{item.entitiy}</td>
                 </tr>
               ))}
             </tbody>

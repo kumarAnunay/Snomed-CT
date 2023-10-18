@@ -1,12 +1,12 @@
 .clinicalFindings {
-  padding: 80px 40px;
+  padding: 50px 40px;
   border-right: 3px solid rgb(187, 187, 187) !important;
   width: 50% !important;
 }
 
 .clinicalFindings h3 {
   color: #000;
-  font-size: 26px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 26.856px;
@@ -16,6 +16,7 @@
 @media screen and (max-width: 750px) {
   .clinicalFindings {
     padding: 40px 15px;
+    padding-bottom: 60px;
     border-right: none !important;
     border-bottom: 3px solid rgb(187, 187, 187) !important;
     width: 100% !important;

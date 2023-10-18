@@ -1,5 +1,5 @@
 .query {
-  padding: 80px 40px;
+  padding: 50px 40px;
   border-right: 3px solid rgb(187, 187, 187) !important;
   width: 50% !important;
   display: flex;
@@ -12,7 +12,7 @@
 
 .query h3 {
   color: #000;
-  font-size: 26px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 26.856px;
@@ -51,7 +51,7 @@ textarea + p {
   border: none;
   background: var(--colors-primary-1, #0158f4);
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
 }

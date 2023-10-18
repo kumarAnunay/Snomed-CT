@@ -1,12 +1,11 @@
 .resultsPage {
   width: 100%;
-  padding: 180px 50px 50px 50px;
-  min-height: 100vh;
+  padding-top: 50px;
 }
 
 .resultsPage h3 {
   color: #000;
-  font-size: 32px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: 26.856px;
@@ -15,11 +14,11 @@
 
 @media screen and (max-width: 550px) {
   .resultsPage {
-    padding: 130px 10px 50px 10px;
+    padding-top: 30px;
   }
 
   .resultsPage h3 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .resultsTable {

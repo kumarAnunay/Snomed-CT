@@ -1,0 +1,47 @@
+.analyzePage {
+  min-height: 100vh;
+  width: 100%;
+  padding: 150px 60px 50px 60px;
+}
+
+.analyzeBttnsContainer {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid rgb(189, 189, 189);
+  padding: 0 0 10px 10px;
+}
+
+.analyzeBttnsContainer button:nth-child(1) {
+  border-right: 2px solid rgb(189, 189, 189);
+  padding-right: 30px;
+}
+
+.analyzeBttnsContainer button:nth-child(2) {
+  padding-left: 30px;
+}
+
+.analyzeBttns {
+  all: unset;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.analyzeBttns span {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .analyzePage {
+    padding: 150px 0 50px 0;
+    margin: 0 5%;
+  }
+
+  .analyzeBttns {
+    font-size: 14px;
+  }
+
+  .analyzeBttnsContainer button:nth-child(1),
+  .analyzeBttnsContainer button:nth-child(2) {
+    padding-right: 20px;
+  }
+}
