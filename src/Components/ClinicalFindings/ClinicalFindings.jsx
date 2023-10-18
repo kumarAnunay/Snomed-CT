@@ -35,39 +35,45 @@ const ClinicalFindings = () => {
     <div className="clinicalFindings">
       <h3>Clinical Findings</h3>
       <div>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Preferred Term</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading ? (
-              <>
-                {[...Array(5)].map((_, index) => (
-                  <tr key={index}>
-                    <td className="skeleton-cell"></td>
-                    <td className="skeleton-cell"></td>
-                  </tr>
-                ))}
-              </>
-            ) : tableData.length ? (
-              tableData.map((item) => (
+        {loading ? (
+          <table>
+            <tbody>
+              {[...Array(5)].map((_, index) => (
+                <tr key={index}>
+                  <td className="skeleton-cell"></td>
+                  <td className="skeleton-cell"></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : tableData.length ? (
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Preferred Term</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData.map((item) => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
                   <td>{item.preferredTerm}</td>
                 </tr>
-              ))
-            ) : (
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <table>
+            <tbody>
               <tr>
                 <td colSpan={2} style={{ textAlign: "center" }}>
                   No Data Found !!!
                 </td>
               </tr>
-            )}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );

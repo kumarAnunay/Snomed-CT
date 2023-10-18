@@ -39,42 +39,46 @@ const Results = () => {
       <div className="resultsPage">
         <h3>Results</h3>
 
-        <table className="resultsTable">
-          <thead>
-            <tr>
-              <th>Concept</th>
-              <th>Preferred Term</th>
-              <th>ID</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading ? (
-              <>
-                {[...Array(10)].map((_, index) => (
-                  <tr key={index}>
-                    <td className="skeleton-cell"></td>
-                    <td className="skeleton-cell"></td>
-                    <td className="skeleton-cell"></td>
-                  </tr>
-                ))}
-              </>
-            ) : tableData.length ? (
-              tableData.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.concept}</td>
-                  <td>{item.preferredTerm}</td>
-                  <td>{item.id}</td>
+        {loading ? (
+          <table className="skeleton-table">
+            <tbody>
+              {[...Array(10)].map((_, index) => (
+                <tr key={index}>
+                  <td className="skeleton-cell"></td>
+                  <td className="skeleton-cell"></td>
+                  <td className="skeleton-cell"></td>
                 </tr>
-              ))
-            ) : (
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <table className="resultsTable">
+            <thead>
               <tr>
-                <td colSpan={2} style={{ textAlign: "center" }}>
-                  No Data Found !!!
-                </td>
+                <th>Concept</th>
+                <th>Preferred Term</th>
+                <th>ID</th>
               </tr>
-            )}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {tableData.length ? (
+                tableData.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.concept}</td>
+                    <td>{item.preferredTerm}</td>
+                    <td>{item.id}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={3} style={{ textAlign: "center" }}>
+                    No Data Found !!!
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        )}
       </div>
       <Footer />
     </>

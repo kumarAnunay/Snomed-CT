@@ -50,8 +50,9 @@ tr:hover {
 }
 
 .skeleton-cell {
-  height: 35px;
+  height: 40px;
   width: 100px;
+  padding: 8px;
   background: linear-gradient(90deg, #faf9f9 25%, #fcfbfb 50%, #fdfcfc 75%);
   background-size: 400% 100%;
   animation: loadingAnimation 2s infinite linear;
@@ -62,6 +63,12 @@ tr:hover {
     background-position: 200% 0;
   }
   100% {
-    background-position: -200% 0;
+    background-position: -100% 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  table {
+    font-size: 14px;
   }
 }

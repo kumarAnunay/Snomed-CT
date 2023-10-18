@@ -13,9 +13,9 @@
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .clinicalFindings {
-    padding: 60px 30px;
+    padding: 40px 15px;
     border-right: none !important;
     border-bottom: 3px solid rgb(187, 187, 187) !important;
     width: 100% !important;

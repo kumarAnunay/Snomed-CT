@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: fixed;
+  right: 0;
+  height: 100%;
 }
 
 .query h3 {
@@ -58,11 +61,12 @@ textarea + p {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .query {
     padding: 60px 30px;
     border-right: none !important;
     width: 100% !important;
+    position: static;
   }
 
   .query h3 {

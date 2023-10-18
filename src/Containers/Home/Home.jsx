@@ -3,8 +3,6 @@ import Footer from "../../Components/Footer/Footer";
 import { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import { useNavigate } from "react-router";
-import { ValuesContext } from "../../Components/ContextProvider";
-import { useContext } from "react";
 
 let timerId;
 
