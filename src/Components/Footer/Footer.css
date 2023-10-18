@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0 50px 30px 0;
+}
+
+.footer-content p {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.footer-content img {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-content {
+    padding: 20px 20px;
+  }
+
+  .footer-content p {
+    font-size: 12px;
+  }
+
+  .footer-content img {
+    width: 85px;
+    height: 35px;
+  }
+}

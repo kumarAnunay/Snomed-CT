@@ -1,0 +1,125 @@
+.signinContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 0 10px 0;
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 30px;
+  border-radius: var(--round-corners-round-l, 8px);
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.signin h3 {
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26.856px;
+  text-shadow: 0 0 2px rgba(8, 8, 8, 0.1);
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 18px 160px 18px 18px !important;
+}
+
+.signin form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.forgotPassword {
+  color: var(--colors-primary-1, #0158f4);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: -20px;
+  cursor: pointer;
+}
+
+.bttnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bttnContainer div {
+  color: var(--default-gray-400, #9ca3af);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26.856px;
+}
+
+.bttnContainer div span {
+  color: var(--colors-primary-2, #2874f0);
+  cursor: pointer;
+}
+
+.signinBtn {
+  display: flex;
+  padding: 10px 20px;
+  min-width: 80px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--round-corners-round-sm, 6px);
+  border: none;
+  background: var(--colors-primary-1, #0158f4);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signinBtn:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.error {
+  display: none;
+  color: red;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 550px) {
+  .signinContainer {
+    padding: 130px 30px 50px 30px;
+  }
+
+  .signin {
+    padding: 45px var(--round-corners-2-xl, 32px);
+  }
+
+  .bttnContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bttnContainer div {
+    font-size: 14px;
+  }
+
+  .signinBtn {
+    font-size: 14px;
+  }
+
+  .forgotPassword {
+    font-size: 14px;
+  }
+
+  .error {
+    font-size: 14px;
+  }
+
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 16px !important;
+  }
+}

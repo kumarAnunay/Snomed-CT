@@ -1,0 +1,33 @@
+.resultsPage {
+  width: 100%;
+  padding: 180px 50px 50px 50px;
+  min-height: 100vh;
+}
+
+.resultsPage h3 {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26.856px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 550px) {
+  .resultsPage {
+    padding: 130px 10px 50px 10px;
+  }
+
+  .resultsPage h3 {
+    font-size: 26px;
+  }
+
+  .resultsTable {
+    font-size: 12px;
+  }
+
+  .resultsTable,
+  td {
+    padding: 4px 3px !important;
+  }
+}

@@ -1,0 +1,77 @@
+.query {
+  padding: 80px 40px;
+  border-right: 3px solid rgb(187, 187, 187) !important;
+  width: 50% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.query h3 {
+  color: #000;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26.856px;
+  margin-bottom: 30px;
+}
+
+.textArea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--colors-gray-300, #8c8e90);
+  background: var(--colors-gray-100, #f9f9fd);
+  resize: none;
+  color: var(--colors-gray-300, #000a13);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+textarea + p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.queryBttn button {
+  display: flex;
+  padding: 10px 20px;
+  min-width: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--round-corners-round-sm, 6px);
+  border: none;
+  background: var(--colors-primary-1, #0158f4);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.queryBttn button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 650px) {
+  .query {
+    padding: 60px 30px;
+    border-right: none !important;
+    width: 100% !important;
+  }
+
+  .query h3 {
+    font-size: 22px;
+  }
+
+  .queryBttn button {
+    padding: 10px 20px;
+    min-width: 80px;
+    font-size: 16px;
+  }
+}
