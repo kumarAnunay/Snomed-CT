@@ -26,7 +26,7 @@
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  padding: 18px 160px 18px 18px !important;
+  width: 330px !important;
 }
 
 .signin form {
@@ -95,7 +95,7 @@
   }
 
   .signin {
-    padding: 45px var(--round-corners-2-xl, 32px);
+    padding: 45px var(--round-corners-2-xl, 25px);
   }
 
   .bttnContainer {
@@ -104,7 +104,9 @@
   }
 
   .bttnContainer div {
-    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
   }
 
   .signinBtn {
@@ -120,6 +122,6 @@
   }
 
   .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    padding: 16px !important;
+    width: 220px !important;
   }
 }
