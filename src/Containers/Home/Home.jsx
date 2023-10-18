@@ -43,7 +43,7 @@ const Home = () => {
     if (showAnalyze) {
       timerId = setTimeout(() => {
         navigate("/analyze");
-        window.location.reload();
+        // window.location.reload();
       }, 1500);
     }
 
@@ -56,7 +56,7 @@ const Home = () => {
     if (showEcl) {
       timerId = setTimeout(() => {
         navigate("/queryBuilder");
-        window.location.reload();
+        // window.location.reload();
       }, 1500);
     }
 

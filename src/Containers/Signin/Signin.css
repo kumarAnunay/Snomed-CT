@@ -29,6 +29,10 @@
   width: 330px !important;
 }
 
+.css-1x5jdmq {
+  width: 330px !important;
+}
+
 .signin form {
   display: flex;
   flex-direction: column;
@@ -47,6 +51,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
 }
 
 .bttnContainer div {
@@ -124,6 +129,10 @@
   }
 
   .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    width: 220px !important;
+  }
+
+  .css-1x5jdmq {
     width: 220px !important;
   }
 }

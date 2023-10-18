@@ -37,8 +37,8 @@ const Query = ({ queryResponseText }) => {
     // console.log(execute);
     if (execute) {
       timerId = setTimeout(() => {
-        navigate("/analyze");
-        window.location.reload();
+        navigate("/executedResult");
+        // window.location.reload();
       }, 1000);
     }
 

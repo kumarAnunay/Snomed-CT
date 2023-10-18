@@ -3,6 +3,7 @@ import Signin from "../Containers/Signin/Signin";
 import Home from "../Containers/Home/Home";
 import QueryBuilder from "../Containers/QueryBuilder/QueryBuilder";
 import Analyze from "./Analyze/Analyze";
+import ExecuteResult from "../Containers/ExecuteResult/ExecuteResult";
 
 export const routes = createBrowserRouter([
   {
@@ -20,5 +21,9 @@ export const routes = createBrowserRouter([
   {
     path: "/analyze",
     element: <Analyze />,
+  },
+  {
+    path: "/executedResult",
+    element: <ExecuteResult />,
   },
 ]);
