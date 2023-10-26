@@ -81,6 +81,11 @@
 .visualizeTextTable {
   background-color: #fff !important;
   width: 60%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+.visualizeTextTable td {
+  font-weight: normal !important;
 }
 
 .visualizeTableHeader th {

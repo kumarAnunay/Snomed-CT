@@ -82,17 +82,17 @@ const EntitiesText = () => {
               </div>
             </div>
             <div className="contentContainers">
-              <h5 className="contentTitle">Text & their Tags TABLE :</h5>
+              <h5 className="contentTitle">Term & their Type TABLE :</h5>
               <div className="visualizeTableContainer">
                 <table className="resultsTable visualizeTextTable">
                   <thead className="visualizeTableHeader">
                     <tr>
-                      <th>Text</th>
-                      <th>Tag</th>
+                      <th>Term</th>
+                      <th>Type</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {responseText?.length ? (
+                    {/* {responseText?.length ? (
                       responseText.map((item, index) => (
                         <tr key={index}>
                           <td>{item.text}</td>
@@ -105,7 +105,39 @@ const EntitiesText = () => {
                           No Data Found !!!
                         </td>
                       </tr>
-                    )}
+                    )} */}
+                    <tr>
+                      <th>severe</th>
+                      <th>modifier</th>
+                    </tr>
+                    <tr>
+                      <th>pain</th>
+                      <th>clinical finding</th>
+                    </tr>
+                    <tr>
+                      <th>right knee</th>
+                      <th>finding site</th>
+                    </tr>
+                    <tr>
+                      <th>diabetes</th>
+                      <th>observable entity</th>
+                    </tr>
+                    <tr>
+                      <th>stomach</th>
+                      <th>body structure</th>
+                    </tr>
+                    <tr>
+                      <th>pneumonia</th>
+                      <th>disorder</th>
+                    </tr>
+                    <tr>
+                      <th>right knee</th>
+                      <th>body structure</th>
+                    </tr>
+                    <tr>
+                      <th>cancer</th>
+                      <th>morphologic abnormality</th>
+                    </tr>
                   </tbody>
                 </table>
               </div>
