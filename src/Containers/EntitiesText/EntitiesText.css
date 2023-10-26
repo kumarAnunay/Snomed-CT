@@ -19,6 +19,21 @@
   background-color: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  gap: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 8px;
+}
+
+.visualizeTableContainer {
+  padding: 0 10px;
+}
+
+.supEntity {
+  font-family: monospace;
+  font-weight: bolder;
+  margin-left: 8px;
 }
 
 .loaderContainer {
@@ -27,6 +42,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 100px 0;
 }
 
 .analyzedTextContainer span {
@@ -40,6 +56,49 @@
 .matchedText {
   background: #aa9cfc;
   border-radius: 5px;
+  font-weight: bold;
+}
+
+.textArrowContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 80px;
+}
+
+.textArrowContainer p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contentTitle {
+  font-size: 18px;
+  padding: 0 15px;
+  word-spacing: 5px;
+}
+
+.visualizeTextTable {
+  background-color: #fff !important;
+  width: 60%;
+}
+
+.visualizeTableHeader th {
+  background-color: #aa9cfc !important;
+}
+
+.contentContainers {
+  width: 100%;
+}
+
+.noReponseText {
+  display: flex;
+  justify-content: center;
+  border: 1px solid grey;
+  padding: 10px 0;
+  margin: 0 10px;
+  font-weight: 500;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,5 +112,9 @@
 
   .analyzedTextContainer span {
     margin-bottom: 10px;
+  }
+
+  .visualizeTextTable {
+    width: 100%;
   }
 }

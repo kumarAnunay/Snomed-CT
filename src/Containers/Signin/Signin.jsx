@@ -7,11 +7,7 @@ import { useNavigate } from "react-router";
 import { ValuesContext } from "../../Components/ContextProvider";
 import { useContext } from "react";
 
-// let timerId;
-
 const Signin = () => {
-  // const [signinStatus, setSigninStatus] = useState(false);
-
   const emailErrorRef = useRef(null);
   const passwordErrorRef = useRef(null);
 
@@ -48,24 +44,10 @@ const Signin = () => {
     if (password.length < 6 || password.length > 60) {
       passwordErrorRef.current.style.display = "block";
     } else {
-      // setSigninStatus(true);
       localStorage.setItem("userEmail", email);
       navigate("/home");
     }
   };
-
-  // useEffect(() => {
-  //   // console.log(signinStatus);
-  //   if (signinStatus) {
-  //     timerId = setTimeout(() => {
-  //       navigate("/home");
-  //     }, 1000);
-  //   }
-
-  //   return () => {
-  //     clearTimeout(timerId);
-  //   };
-  // }, [signinStatus]);
 
   return (
     <>

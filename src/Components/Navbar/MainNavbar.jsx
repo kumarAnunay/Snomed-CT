@@ -3,6 +3,7 @@ import SnomedCT from "../../assets/snomed-ct.png";
 import MicrosoftFabric from "../../assets/microsoft-fabric.png";
 import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
+import AssessmentIcon from "@mui/icons-material/Assessment";
 import {
   Avatar,
   Box,
@@ -52,10 +53,18 @@ const MainNavbar = () => {
         />
       </div>
       <div className="avatarLogo">
+        <Tooltip title="Report">
+          <AssessmentIcon
+            className="reportIcon"
+            onClick={() => navigate("/report")}
+          />
+        </Tooltip>
         <Box className="avatar">
           <Tooltip title="Profile">
             <IconButton onClick={menuOpenHandler} sx={{ p: 0 }}>
-              <Avatar sx={{ bgcolor: "#0158f4" }}>{avatarName}</Avatar>
+              <Avatar sx={{ bgcolor: "#0158f4" }} className="avtarIcon">
+                {avatarName}
+              </Avatar>
             </IconButton>
           </Tooltip>
           <Menu
@@ -82,11 +91,16 @@ const MainNavbar = () => {
             </MenuItem>
           </Menu>
         </Box>
-        <img
-          src={MicrosoftFabric}
-          alt="microsoft-fabric"
-          className={"nav-image2"}
-        />
+        <a
+          href="https://www.microsoft.com/en-us/microsoft-fabric"
+          target="_blank"
+        >
+          <img
+            src={MicrosoftFabric}
+            alt="microsoft-fabric"
+            className={"nav-image2"}
+          />
+        </a>
       </div>
     </div>
   );

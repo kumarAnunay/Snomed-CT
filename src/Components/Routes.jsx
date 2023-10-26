@@ -4,6 +4,7 @@ import Home from "../Containers/Home/Home";
 import QueryBuilder from "../Containers/QueryBuilder/QueryBuilder";
 import Analyze from "./Analyze/Analyze";
 import ExecuteResult from "../Containers/ExecuteResult/ExecuteResult";
+import Report from "../Containers/Report/Report";
 
 export const routes = createBrowserRouter([
   {
@@ -25,5 +26,9 @@ export const routes = createBrowserRouter([
   {
     path: "/executedResult",
     element: <ExecuteResult />,
+  },
+  {
+    path: "/report",
+    element: <Report />,
   },
 ]);

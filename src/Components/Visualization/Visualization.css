@@ -1,0 +1,39 @@
+.visualizeArrows {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 25px;
+  gap: 50px;
+  overflow-x: auto;
+}
+
+.visualizeArrows::-webkit-scrollbar {
+  display: none;
+}
+
+.textArrowContainer {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arcContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+}
+
+.halfCircle {
+  width: 250px;
+  height: 120px;
+  margin: 0 7.5px;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-bottom: none;
+}

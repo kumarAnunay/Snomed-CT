@@ -14,8 +14,6 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  // const { freeWordsText, setFreeWordsText } = useContext(ValuesContext);
-
   const inputHandler = (event) => {
     setInput(event.target.value);
     setShowAnalyze(false);

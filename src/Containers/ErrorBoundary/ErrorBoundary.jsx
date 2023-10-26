@@ -1,12 +1,15 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ErrorIcon from "@mui/icons-material/Error";
 import "./ErrorBoundary.css";
 
 const ErrorBoundary = ({ children }) => {
+  const [hasError, setHasError] = useState(false);
+
   useEffect(() => {
     const errorHandler = (error) => {
       console.error("Error", error);
       localStorage.setItem("error", JSON.stringify(error));
+      setHasError(true);
     };
 
     window.addEventListener("error", errorHandler);
@@ -17,9 +20,7 @@ const ErrorBoundary = ({ children }) => {
     };
   }, []);
 
-  const storedError = localStorage.getItem("error");
-
-  if (storedError) {
+  if (hasError) {
     return (
       <div className="errorBoundary">
         <div>

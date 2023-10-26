@@ -53,7 +53,7 @@ tr:hover {
   height: 40px;
   width: 100px;
   padding: 8px;
-  background: linear-gradient(90deg, #faf9f9 25%, #fcfbfb 50%, #fdfcfc 75%);
+  background: linear-gradient(90deg, #faf9f9 25%, #fcfcfc 50%, #fdfcfc 75%);
   background-size: 400% 100%;
   animation: loadingAnimation 2s infinite linear;
 }

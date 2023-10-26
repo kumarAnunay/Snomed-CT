@@ -58,6 +58,7 @@ const Query = ({ queryResponseText }) => {
           onChange={inputHandler}
           className="textArea"
           ref={inputRef}
+          readOnly={true}
         ></textarea>
       </div>
       <div className="queryBttn">

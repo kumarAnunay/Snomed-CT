@@ -1,10 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import "./Results.css";
-// import { data } from "../../utils/Constants/QueryTable";
-import { ValuesContext } from "../../Components/ContextProvider";
 import axios from "axios";
-
-// let timerId;
 
 let queryResponse;
 
@@ -25,10 +21,10 @@ const Results = () => {
         }
       );
       setTableData(response?.data?.results?.items);
-      console.log("Query Response Data:- ", tableData);
+      // console.log("Query Response Data:- ", tableData);
       setLoading(false);
     } catch (error) {
-      console.error("Error fetching data from the API:", error);
+      console.log("API Error:", error);
       setLoading(false);
     }
   };
@@ -36,29 +32,6 @@ const Results = () => {
   useEffect(() => {
     filterData();
   }, []);
-
-  //   useEffect(() => {
-  //     const freeText = localStorage.getItem("freeText");
-  //     const searchText = freeText.toLowerCase().split(" ");
-  //     let filteredData = data;
-
-  //     filteredData = filteredData.filter((item) => {
-  //       return searchText.some((text) => {
-  //         return item.preferredTerm.toLowerCase().includes(text);
-  //       });
-  //     });
-
-  //     console.log("data", filteredData);
-
-  //     timerId = setTimeout(() => {
-  //       setTableData(filteredData);
-  //       setLoading(false);
-  //     }, 1000);
-
-  //     return () => {
-  //       clearTimeout(timerId);
-  //     };
-  //   }, []);
 
   return (
     <div className="resultsPage">

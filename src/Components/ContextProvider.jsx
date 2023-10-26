@@ -4,12 +4,6 @@ import { useState } from "react";
 export const ValuesContext = createContext();
 
 export const ContextProvider = ({ children }) => {
-  // const [signupDetails, setSignupDetails] = useState({});
-  // const [data, setData] = useState([])
-
-  const [freeWordsText, setFreeWordsText] = useState("");
-  const [queryText, setqueryText] = useState("");
-
   const [signinDetails, setSigninDetails] = useState({
     email: "",
     password: "",
@@ -20,10 +14,6 @@ export const ContextProvider = ({ children }) => {
       value={{
         signinDetails,
         setSigninDetails,
-        freeWordsText,
-        setFreeWordsText,
-        queryText,
-        setqueryText,
       }}
     >
       {children}
